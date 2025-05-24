@@ -84,21 +84,7 @@ class GetStock:
                     logger.error("Exception: exception getting stock data caused by %s" % e)
                     raise
 
-                # check before adding to ES
-                if D['last'] is not None and D['high'] is not None and D['low'] is not None:
-                    logger.info("Adding stock data to Elasticsearch...")
-                    # add stock price info to elasticsearch
-                    es.index(index=args.index,
-                             doc_type="stock",
-                             body={"symbol": D['symbol'],
-                                   "price_last": D['last'],
-                                   "date": D['date'],
-                                   "change": D['change'],
-                                   "price_high": D['high'],
-                                   "price_low": D['low'],
-                                   "vol": D['vol']
-                                   })
-                else:
+              
                     logger.warning("Some stock data had null values, not adding to Elasticsearch")
 
             except Exception as e:
@@ -153,19 +139,7 @@ if __name__ == '__main__':
                        % logging.getLevelName(logging.DEBUG))
     logformatter = '%(asctime)s [%(levelname)s][%(name)s] %(message)s'
     loglevel = logging.INFO
-    logging.basicConfig(format=logformatter, level=loglevel)
-    if args.verbose:
-        logger.setLevel(logging.INFO)
-        eslogger.setLevel(logging.INFO)
-        requestslogger.setLevel(logging.INFO)
-    if args.debug:
-        logger.setLevel(logging.DEBUG)
-        eslogger.setLevel(logging.DEBUG)
-        requestslogger.setLevel(logging.DEBUG)
-    if args.quiet:
-        logger.disabled = True
-        eslogger.disabled = True
-        requestslogger.disabled = True
+jshdi
 
     # print banner
     if not args.quiet:
