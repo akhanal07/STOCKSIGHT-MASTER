@@ -161,7 +161,7 @@ jshdi
     |_   _|_| |___|___|_,_|_   _|_|_  |_|_|_|  
       |_|                   |_|   |___|                
           :) = +$   :( = -$    v%s
-     https://github.com/shirosaidev/stocksight
+     
             \033[0m""" % (color, STOCKSIGHT_VERSION)
         print(banner + '\n')
 
