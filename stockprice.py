@@ -139,7 +139,7 @@ if __name__ == '__main__':
                        % logging.getLevelName(logging.DEBUG))
     logformatter = '%(asctime)s [%(levelname)s][%(name)s] %(message)s'
     loglevel = logging.INFO
-jshdi
+
 
     # print banner
     if not args.quiet:
