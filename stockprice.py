@@ -11,7 +11,7 @@ LICENSE for the full license text.
 
 import time
 import requests
-import re
+
 import argparse
 import logging
 import sys
