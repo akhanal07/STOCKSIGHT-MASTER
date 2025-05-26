@@ -211,7 +211,7 @@ if __name__ == '__main__':
     stockprice = GetStock()
 
     try:
-        # get stock price
+      
         stockprice.get_price(symbol=args.symbol, url=url)
     except Exception as e:
         logger.warning("Exception: Failed to get stock data caused by: %s" % e)
