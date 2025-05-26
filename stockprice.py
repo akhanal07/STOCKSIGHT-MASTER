@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+
 """stockprice.py - get stock price from Yahoo and add to
 Elasticsearch.
 See README.md or https://github.com/shirosaidev/stocksight
