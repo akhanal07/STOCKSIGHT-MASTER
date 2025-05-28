@@ -7,6 +7,8 @@ import nltk
 import argparse
 import logging
 import string
+
+
 try:
     import urllib.parse as urlparse
 except ImportError:
