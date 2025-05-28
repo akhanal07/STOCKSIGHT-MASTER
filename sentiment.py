@@ -576,7 +576,7 @@ def get_twitter_users_from_url(url):
     try:
         twitter_urls = ("http://twitter.com/", "http://www.twitter.com/",
                         "https://twitter.com/", "https://www.twitter.com/")
-        # req_header = {'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38"}
+       
         req = requests.get(url)
         html = req.text
         soup = BeautifulSoup(html, 'html.parser')
@@ -587,7 +587,7 @@ def get_twitter_users_from_url(url):
             for link in html_links:
                 # check if twitter_url in link
                 parsed_uri = urlparse.urljoin(link, '/')
-                # get twitter user name from link and add to list
+               
                 if parsed_uri in twitter_urls and "=" not in link and "?" not in link:
                     user = link.split('/')[3]
                     twitter_users.append(u'@' + user)
