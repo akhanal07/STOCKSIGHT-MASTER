@@ -17,6 +17,8 @@
       }
     }
   },
+
+  
   {
     "_id": "AWZO_6iv0rkQl37xrvXt",
     "_type": "search",
@@ -41,7 +43,10 @@
         "searchSourceJSON": "{\"index\":\"stocksight\",\"highlightAll\":true,\"version\":true,\"query\":{\"match_all\":{}},\"filter\":[{\"meta\":{\"index\":\"stocksight\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"_type\",\"value\":\"tweet\"},\"query\":{\"match\":{\"_type\":{\"query\":\"tweet\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
       }
     }
+    
   },
+
+  
   {
     "_id": "AWZY6Xtjh4RzKn4w3NXT",
     "_type": "visualization",
